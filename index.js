@@ -3,7 +3,7 @@ var httpProxy = require('http-proxy')
 var services = {
   'Site2': 'http://localhost:8005',
   'Site1': 'http://localhost:8006',
-  'Site3': 'http://localhost:5000',
+  'Site3': 'http://localhost:8007',
 }
 
 var proxy = httpProxy.createProxy()
