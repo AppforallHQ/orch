@@ -1,0 +1,3 @@
+#!/bin/sh
+restart orch
+echo "restarting orch service"
