@@ -1,3 +1,5 @@
 #!/bin/sh
-restart orch
+stop orch
+foreman export upstart /etc/init -a orch -l /tmp/orch_log -u root -p 3000 # (FIXME: don't use root)
+start orch
 echo "restarting orch service"
