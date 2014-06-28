@@ -19,6 +19,8 @@ require('http').createServer(function(req, res) {
     target = "Site3"
   }
 
+  req.__orch_target = target
+
   proxy.web(req, res, {
     target: services[target],
     ws: true
@@ -31,5 +33,5 @@ proxy.on('error', function (err, req, res) {
     'Content-Type': 'text/plain'
   })
 
-  res.end('Something went wrong. :(')
+  res.end('Something went wrong in ' + req.__orch_target + '. :(')
 })
