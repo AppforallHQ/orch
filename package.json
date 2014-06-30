@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "http-proxy": "^1.1.4"
+    "http-proxy": "^1.1.4",
+    "node-static": "~0.7.3"
   }
 }

@@ -7,9 +7,18 @@ var services = {
 }
 
 var proxy = httpProxy.createProxy()
+var static = require('node-static')
+var file = new(static.Server)()
+
+var static_files = ["/robots.txt", "/favicon.ico"]
 
 require('http').createServer(function(req, res) {
   var target;
+
+  if(static_files.indexOf(req.url) > -1) {
+    file.serve(req, res)
+    return;
+  }
 
   if(req.url.match(/^\/dashboard/)) {
     target = "Site1"
