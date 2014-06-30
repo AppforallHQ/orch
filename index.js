@@ -8,7 +8,7 @@ var services = {
 
 var proxy = httpProxy.createProxy()
 var static = require('node-static')
-var file = new(static.Server)()
+var file = new(static.Server)("./public")
 
 var static_files = ["/robots.txt", "/favicon.ico"]
 
