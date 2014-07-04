@@ -43,4 +43,13 @@ proxy.on('error', function (err, req, res) {
   })
 
   res.end('Something went wrong in ' + req.__orch_target + '. :(')
+  // console.log(res.status)
+
+  // file.serveFile('/500.html', 500, {'X-AF-TARGET': req.__orch_target}, req, res);
 })
+
+// proxy.on('end', function (req, res) {
+//   console.log('YOLO')
+//   console.log(res.status)
+//   res.end()
+// })
