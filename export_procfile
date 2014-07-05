@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo foreman export upstart /etc/init -a orch -u user -p 3000
