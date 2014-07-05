@@ -12,6 +12,8 @@ var file = new(static.Server)("./public")
 
 var static_files = ["/robots.txt", "/favicon.ico"]
 
+var PORT = process.env.PORT || 3000
+
 require('http').createServer(function(req, res) {
   var target;
 
@@ -35,14 +37,19 @@ require('http').createServer(function(req, res) {
     ws: true
   })
 
-}).listen(process.env.PORT || 3000)
+}).listen(PORT)
+
+console.log("Server started on port %d", PORT)
 
 proxy.on('error', function (err, req, res) {
   res.writeHead(500, {
     'Content-Type': 'text/plain'
   })
 
-  res.end('Something went wrong in ' + req.__orch_target + '. :(')
+  var msg = 'Something went wrong in ' + req.__orch_target + '. :('
+  console.log(msg)
+
+  res.end(msg)
   // console.log(res.status)
 
   // file.serveFile('/500.html', 500, {'X-AF-TARGET': req.__orch_target}, req, res);
