@@ -37,7 +37,7 @@ require('http').createServer(function(req, res) {
     ws: true
   })
 
-}).listen(PORT)
+}).listen(PORT, 'localhost')
 
 console.log("Server started on port %d", PORT)
 
