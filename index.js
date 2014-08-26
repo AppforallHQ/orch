@@ -22,7 +22,7 @@ require('http').createServer(function(req, res) {
     return;
   }
 
-  if(req.url.match(/^\/dashboard/)) {
+  if(req.url.match(/^\/dashboard/) || req.url.match(/^\/panel/)) {
     target = "Site1"
   } else if(req.url.match(/^\/Site2/)) {
     target = "Site2"
