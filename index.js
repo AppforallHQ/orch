@@ -10,7 +10,7 @@ var proxy = httpProxy.createProxy()
 var static = require('node-static')
 var file = new(static.Server)("./public")
 
-var static_files = ["/robots.txt", "/favicon.ico"]
+var static_files = ["/some_static_data.txt","/robots.txt", "/favicon.ico"]
 
 var PORT = process.env.PORT || 3000
 
