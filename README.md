@@ -11,7 +11,7 @@ servers, compared to nginx configs.
 
 Also, orch is an asset in our development environment. If we didn't have orch,
 we were required to change local nginx config of each of our developers. We hate
-to have endpoints like "http://PROJECT.ir:{8005,8006,8007,etc}", so we put it
+to have endpoints like `http://PROJECT.ir:{8005,8006,8007,etc}`, so we put it
 all behind `orch`. Morever, we can hide django admins behind orch like this:
 
 1. In our django app (say `Site1`), we set the panel to
